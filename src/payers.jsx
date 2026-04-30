@@ -6,6 +6,7 @@ export default function Player(){
     const [sixes, setSixes] = useState(0);
 
 
+
     const hitSingle = ()=>{
         const updateRuns = runs + 1 ;
         setRuns(updateRuns);
