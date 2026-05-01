@@ -1,11 +1,14 @@
 import { use } from "react";
+import User from './User';
 
 export default function Users({fetchUsers}){
-    const user = use(fetchUsers);
-    console.log(user);
+    const users = use(fetchUsers);
     return(
         <div className="border">
-            <h3>User = {user.length} </h3>
+            <h3>User</h3>
+            {
+                users.map(user => <User key={user.id} User={user}></User>)
+            }
         </div>
     )
 }
